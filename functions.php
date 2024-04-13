@@ -77,3 +77,12 @@ function custom_theme_logo_size()
 	));
 }
 add_action('after_setup_theme', 'custom_theme_logo_size');
+
+
+// Fonts
+function custom_theme_fonts()
+{
+	// Register custom fonts
+	wp_enqueue_style('lobster-two', 'https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), null);
+}
+add_action('wp_enqueue_scripts', 'custom_theme_fonts');
