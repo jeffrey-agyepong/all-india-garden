@@ -60,7 +60,8 @@
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000;
+	/* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
@@ -79,25 +80,36 @@
 @media (--sidebar-query) {
 
 	.has-sidebar .site {
-		margin: 0 1em;
+		/* margin: 0 1em; */
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			"header header header header"
+			"main main main main"
+			"footer footer footer footer";
 		grid-gap: 2rem;
 		justify-content: center;
 	}
 
-	.site-header,
-	.site-footer {
-		grid-column: 1 / -1;
+	.site-header {
+		grid-area: header;
 	}
 
 	.site-main {
-		grid-column: 1;
+		grid-area: main;
 		min-width: 0;
+		min-height: 100vh
+	}
+
+	.site-footer {
+		grid-area: footer;
+		background: #000000c8;
+		text-align: center;
+		color: #ffffff;
 	}
 
 	.primary-sidebar {
-		grid-column: 2;
+		grid-column: 0;
 		min-width: 0;
 	}
 }
@@ -109,6 +121,7 @@
 textarea {
 	width: 100%;
 }
+
 /* stylelint-enable */
 
 /* stylelint-disable */
@@ -126,6 +139,7 @@ input[type="submit"] {
 	padding: 0.6em 1em 0.4em;
 	cursor: pointer;
 }
+
 /* stylelint-enable */
 
 button:hover,
@@ -196,7 +210,15 @@ select {
 --------------------------------------------------------------*/
 
 .site-header {
-	padding-bottom: 1em;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.281);
+	gap: 5%;
+	text-transform: uppercase;
+	z-index: 100;
+	position: relative;
 }
 
 .header-image {
@@ -208,14 +230,16 @@ select {
 	margin: 0 auto;
 }
 
+.custom-logo {
+	width: 300px;
+}
+
 .custom-logo-link {
 	display: inline-block;
-	margin: 0 auto 1em;
 }
 
 .site-branding {
 	text-align: center;
-	padding: 60px 0 1.75em;
 
 	@media screen and (max-width: 600px) {
 		padding: 1.75em 0;
@@ -234,7 +258,7 @@ select {
 
 .site-title a {
 	text-decoration: none;
-	color: inherit;
+	color: #f1f1f1;
 }
 
 .site-description {
@@ -306,7 +330,8 @@ nav div.wp-block-navigation__responsive-dialog {
 		display: none;
 
 		@media screen and (max-width: 600px) {
-			display: block;
+			display: block !important;
+			background-color: rgb(249, 247, 247);
 		}
 
 		& .dashicons-menu-alt::before {
@@ -367,12 +392,12 @@ nav div.wp-block-navigation__responsive-dialog {
 			& .primary-menu-container {
 				position: absolute;
 				z-index: -5;
-				background: #fff;
+				background: rgba(0, 0, 0, 0.94);
 				width: 100vw;
 				top: 300px;
 				left: 0;
-				height: 200%;
-				padding: 20px 30px;
+				height: 330%;
+				padding: 0px 30px;
 				opacity: 0;
 				transition:
 					opacity 0.3s ease,
@@ -381,9 +406,10 @@ nav div.wp-block-navigation__responsive-dialog {
 				visibility: hidden;
 			}
 
-			/* & .menu {
+			& .menu {
 				visibility: visible;
-			} */
+				flex-direction: column !important;
+			}
 
 			&.nav--toggled-on {
 
@@ -392,7 +418,7 @@ nav div.wp-block-navigation__responsive-dialog {
 				}
 
 				& .primary-menu-container {
-					top: 180px;
+					top: 115px;
 					z-index: 5;
 					opacity: 1;
 					transition: opacity 0.3s ease, top 0.3s ease-out;
@@ -441,7 +467,7 @@ nav div.wp-block-navigation__responsive-dialog {
 	transition: transform 0.2s;
 }
 
-.nav--toggle-sub li.menu-item--toggled-on > button.dropdown-toggle .dropdown-symbol {
+.nav--toggle-sub li.menu-item--toggled-on>button.dropdown-toggle .dropdown-symbol {
 	transform: translateY(-50%) rotate(225deg);
 }
 
@@ -449,7 +475,7 @@ nav div.wp-block-navigation__responsive-dialog {
 	transition: transform 0.2s;
 }
 
-.nav--toggle-sub li.menu-item--toggled-on > button.wp-block-navigation-submenu__toggle svg {
+.nav--toggle-sub li.menu-item--toggled-on>button.wp-block-navigation-submenu__toggle svg {
 	transform: rotate(180deg);
 }
 
@@ -539,9 +565,9 @@ nav div.wp-block-navigation__responsive-dialog {
 	 * If the dropdown toggle is active with JS, then
 	 * we'll take care of showing the submenu with JS.
 	 */
-	.nav--toggle-sub li:hover > ul,
-	.nav--toggle-sub li.menu-item--toggled-on > ul,
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
+	.nav--toggle-sub li:hover>ul,
+	.nav--toggle-sub li.menu-item--toggled-on>ul,
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus>ul {
 		display: block;
 	}
 
@@ -553,7 +579,7 @@ nav div.wp-block-navigation__responsive-dialog {
 	 * This selector needs to stay separated, otherwise submenus
 	 * will not be displayed with IE/Edge.
 	 */
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within > ul {
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within>ul {
 		display: block;
 	}
 }
@@ -563,9 +589,9 @@ nav div.wp-block-navigation__responsive-dialog {
 --------------------------------------------------------------*/
 .main-navigation {
 	display: block;
-	margin: 0 auto 2em;
-	padding: 0 1em;
-	max-width: var(--content-width);
+	/* margin: 0 auto 2em;
+	padding: 0 1em; */
+	/* max-width: var(--content-width); */
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 
@@ -583,7 +609,7 @@ nav div.wp-block-navigation__responsive-dialog {
 	width: 100%;
 	padding: 0.5em 1em 0.5em 0;
 	text-decoration: none;
-	color: var(--global-font-color);
+	color: #ffffff !important;
 }
 
 .main-navigation a:hover,
@@ -591,8 +617,12 @@ nav div.wp-block-navigation__responsive-dialog {
 	text-decoration: underline;
 }
 
-.main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a {
+.menu li.current-menu-item a {
+	background-color: #000 !important;
+}
+
+.main-navigation .current-menu-item>a,
+.main-navigation .current-menu-ancestor>a {
 	font-weight: 600;
 }
 
@@ -667,6 +697,7 @@ nav div.wp-block-navigation__responsive-dialog {
 		padding-left: 0;
 		margin-left: 0;
 	}
+
 	/* stylelint-enable */
 
 	.main-navigation ul ul li a {
@@ -856,4 +887,20 @@ nav div.wp-block-navigation__responsive-dialog {
 were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+@media screen and (max-width: 600px) {
+	.site-header {
+		background: rgba(0, 0, 0, 0.94);
+	}
+
+	.site-header nav#site-navigation ul.menu li a {
+		padding: 15px 0 !important;
+	}
+}
+
+@media screen and (max-width: 1115px) {
+	.site-header {
+		flex-wrap: wrap;
+	}
 }

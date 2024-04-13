@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -13,12 +14,13 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<?php get_template_part( 'template-parts/footer/info' ); ?>
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+	<p>©2024 India Garden</p>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

@@ -6,7 +6,7 @@
  **/
 
 :root {
-	--content-width: 45rem;
+	--content-width: 112.5rem;
 	--dropdown-symbol-width: 0.7em;
 
 	/* Typography */
@@ -22,7 +22,7 @@
 	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
 
 	/* Colors */
-	--global-font-color: #333;
+	--global-font-color: #fff;
 	--border-color-dark: #333;
 	--border-color-light: #ccc;
 	--color-link: #0073aa;
