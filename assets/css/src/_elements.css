@@ -25,6 +25,7 @@ html {
 body {
 	background: #151515;
 	font-family: "Nunito Sans", Sans-serif;
+	overflow-x: hidden;
 	/* Fallback for when there is no custom background color defined. */
 }
 
