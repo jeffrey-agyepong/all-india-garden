@@ -1,1 +1,16 @@
-{}
+{
+    "theme": {
+    "slug": "indiagarden",
+    "name": "India Garden",
+    "author": "J.A Web Design"
+    },
+    "dev": {
+        "browserSync": {
+          "live": true,
+          "proxyURL": "all-india-garden.local",
+          "bypassPort": "8181",
+          "https": true
+        }
+    }
+  }
+  

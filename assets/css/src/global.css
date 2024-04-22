@@ -423,12 +423,12 @@ nav div.wp-block-navigation__responsive-dialog {
 				transition:
 					opacity 0.3s ease,
 					top 0.3s ease-out,
-					visibility 0.1s ease 0.4s;
-				visibility: hidden;
+					none 0.1s ease 0.4s;
+				display: none;
 			}
 
 			& .menu {
-				visibility: visible;
+				display: block;
 				flex-direction: column !important;
 			}
 
@@ -443,12 +443,12 @@ nav div.wp-block-navigation__responsive-dialog {
 					z-index: 5;
 					opacity: 1;
 					transition: opacity 0.3s ease, top 0.3s ease-out;
-					visibility: visible;
+					display: block;
 				}
 
-				/* & .menu {
-					visibility: visible;
-				} */
+				& .menu {
+					/* visibility: visible; */
+				}
 			}
 		}
 	}
@@ -931,5 +931,31 @@ were hidden (via .neverending) before. */
 @media screen and (max-width: 1115px) {
 	.site-header {
 		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 37em) {
+	header#masthead:has(nav) {
+		display: grid;
+		grid-template-columns: 80% 20%;
+		padding: 25px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+
+	.site-branding {
+		order: 1;
+		flex-grow: 1;
+	}
+
+	#site-navigation {
+		order: 3;
+	}
+
+	.custom-logo {
+		display: block;
+
 	}
 }

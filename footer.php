@@ -17,7 +17,7 @@ namespace WP_Rig\WP_Rig;
 <footer id="colophon" class="site-footer">
 	<div class="flex">
 		<div class="custom-logo">
-			<img src="http://all-india-garden.local/wp-content/uploads/2024/04/indiagarden-logo-white.png" alt="India Garden Logo">
+			<img src="/wp-content/uploads/2024/04/indiagarden-logo-white.png" alt="India Garden Logo">
 		</div>
 		<div class="footer-info">
 			<p>4820-76 Avenue, Edmonton</p>
