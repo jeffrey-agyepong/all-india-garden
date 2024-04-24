@@ -15,7 +15,7 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <footer id="colophon" class="site-footer">
-	<div class="flex">
+	<div class="footer-flex">
 		<div class="custom-logo">
 			<img src="/wp-content/uploads/2024/04/indiagarden-logo-white.png" alt="India Garden Logo">
 		</div>
@@ -38,7 +38,7 @@ namespace WP_Rig\WP_Rig;
 			</a>
 		</div>
 	</div>
-	<div class="flex">
+	<div class="footer-flex">
 		<p>©2024 India Garden</p>
 		<p><a href="https://jawebdesign.ca/" target="_blank">
 				Developed by J.A Web Design

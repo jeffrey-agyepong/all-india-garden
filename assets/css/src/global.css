@@ -81,17 +81,23 @@ h2 {
 	font-family: "Lobster Two", sans-serif;
 }
 
-.site-footer .flex {
-	display: flex;
-	justify-content: space-around;
-	gap: 1rem;
+@media screen and (min-width: 600px) {
+	.footer-flex {
+		display: flex;
+		justify-content: space-around;
+		gap: 1rem;
+	}
+
 }
 
+.site-footer .custom-logo {
+	width: 250px;
+}
 
 .sitefooter a {
 	display: block;
 	text-decoration: none !important;
-	color: blue;
+	color: #a93338;
 }
 
 @media (--sidebar-query) {
@@ -352,7 +358,7 @@ nav div.wp-block-navigation__responsive-dialog {
 
 		@media screen and (max-width: 600px) {
 			display: block !important;
-			background-color: rgb(249, 247, 247);
+			fill: white;
 		}
 
 		& .dashicons-menu-alt::before {
@@ -881,14 +887,19 @@ nav div.wp-block-navigation__responsive-dialog {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-	margin: 1em 0 0;
-	/* padding: 1em 0; */
+	/* margin: 1em 0 0; */
+
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 }
 
-.site-footer .flex:first-child {
+.footer-flex:first-child {
+	margin: 1.5rem 0;
 	background: #151515;
+}
+
+.footer-flex:nth-child(2) {
+	/* margin-top: 0.5rem; */
 }
 
 .site-info {

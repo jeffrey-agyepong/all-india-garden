@@ -27,8 +27,14 @@
 
 }
 */
+body,
+h4 {
+	font-family: var(--global-font-family);
+}
+
 a {
 	text-decoration: none;
+	color: #a93338;
 }
 
 .entry {
@@ -341,6 +347,7 @@ a {
 	max-width: 1200px;
 	margin: 0 auto;
 	margin-top: 80px;
+	padding: 20px;
 }
 
 .menu-section .container h2 {
@@ -384,6 +391,10 @@ a {
 	border-bottom: 2px solid #E64A19;
 }
 
+.menu-section p {
+	font-size: 1rem;
+}
+
 .nowrap {
 	white-space: nowrap;
 }
@@ -393,4 +404,8 @@ a {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
+	.menu-section .container {
+		padding: 0;
+
+	}
 }

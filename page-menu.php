@@ -125,6 +125,9 @@ get_header();
             <h2>
                 Garden Specialties
             </h2>
+            <p>
+                Served with a fresh piece of Naan
+            </p>
             <div class="grid-container">
                 <?php
                 $args = array(
@@ -168,6 +171,9 @@ get_header();
             <h2>
                 Chicken Specialties
             </h2>
+            <p>
+                Served with a fresh piece of Naan
+            </p>
             <div class="grid-container">
                 <?php
                 $args = array(
@@ -209,6 +215,9 @@ get_header();
             <h2>
                 Lamb, Beef & Goat Specialties
             </h2>
+            <p>
+                Served with a fresh piece of Naan
+            </p>
             <div class="grid-container">
                 <?php
                 $args = array(
@@ -250,6 +259,9 @@ get_header();
             <h2>
                 Seafood Specialties
             </h2>
+            <p>
+                Served with a fresh piece of Naan
+            </p>
             <div class="grid-container">
                 <?php
                 $args = array(
@@ -451,7 +463,7 @@ get_header();
         </section>
 
         <!-- INDO CHINESE -->
-        <section class="mb-20" id="indo-chinese">
+        <section class="" id="indo-chinese">
             <h2>
                 Indo Chinese
             </h2>
