@@ -125,7 +125,7 @@ get_header();
             <h2>
                 Garden Specialties
             </h2>
-            <p>
+            <p class="description">
                 Served with a fresh piece of Naan
             </p>
             <div class="grid-container">
@@ -171,7 +171,7 @@ get_header();
             <h2>
                 Chicken Specialties
             </h2>
-            <p>
+            <p class="description">
                 Served with a fresh piece of Naan
             </p>
             <div class="grid-container">
@@ -215,7 +215,7 @@ get_header();
             <h2>
                 Lamb, Beef & Goat Specialties
             </h2>
-            <p>
+            <p class="description">
                 Served with a fresh piece of Naan
             </p>
             <div class="grid-container">
@@ -259,7 +259,7 @@ get_header();
             <h2>
                 Seafood Specialties
             </h2>
-            <p>
+            <p class="description">
                 Served with a fresh piece of Naan
             </p>
             <div class="grid-container">

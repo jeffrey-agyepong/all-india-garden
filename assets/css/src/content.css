@@ -399,6 +399,11 @@ a {
 	white-space: nowrap;
 }
 
+.description {
+	color: #a93338;
+	font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
 	.grid-container {
 		grid-template-columns: repeat(3, 1fr);
