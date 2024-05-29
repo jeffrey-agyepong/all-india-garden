@@ -255,7 +255,7 @@ get_header();
         </section>
 
         <!-- SEAFOOD SPECIALTIES -->
-        <section class="mb-20" id="seafood-specialti">
+        <section class="mb-20" id="seafood-specialties">
             <h2>
                 Seafood Specialties
             </h2>

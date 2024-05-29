@@ -135,7 +135,7 @@ a {
 
 .entry-footer {
 	clear: both;
-	padding: 1.5em 1.5rem 3em;
+	/* padding: 1.5em 1.5rem 3em; */
 	/* border-bottom: 1px solid var(--global-font-color); */
 }
 
@@ -341,6 +341,7 @@ a {
 .menu-section {
 	background: #000;
 	min-height: 100vh;
+	padding: 0 50px;
 }
 
 .menu-section .container {

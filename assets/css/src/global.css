@@ -87,21 +87,9 @@ h2 {
 		justify-content: space-around;
 		gap: 1rem;
 	}
-
-}
-
-.site-footer .custom-logo {
-	width: 250px;
-}
-
-.sitefooter a {
-	display: block;
-	text-decoration: none !important;
-	color: #a93338;
 }
 
 @media (--sidebar-query) {
-
 	.has-sidebar .site {
 		/* margin: 0 1em; */
 		display: grid;
@@ -121,7 +109,7 @@ h2 {
 	.site-main {
 		grid-area: main;
 		min-width: 0;
-		min-height: 100vh
+		min-height: 100vh;
 	}
 
 	.site-footer {
@@ -300,7 +288,6 @@ select {
 }
 
 @media (--narrow-menu-query) {
-
 	header#masthead:has(nav) {
 		display: grid;
 		grid-template-columns: 1fr 6fr;
@@ -312,7 +299,6 @@ select {
 			& .site-title {
 				margin: 0.5em 0;
 			}
-
 		}
 
 		& .main-navigation.nav--toggle-sub {
@@ -323,12 +309,10 @@ select {
 				top: 0;
 			}
 		}
-
 	}
 }
 
 nav div.wp-block-navigation__responsive-dialog {
-
 	@media screen and (max-width: 600px) {
 		margin: 1em;
 	}
@@ -372,19 +356,16 @@ nav div.wp-block-navigation__responsive-dialog {
 }
 
 .nav--toggle-small {
-
 	& .menu {
 		display: none;
 	}
 
 	&.nav--toggled-on {
-
 		& .menu {
 			display: block;
 		}
 
 		@media screen and (min-width: 600px) {
-
 			& .menu {
 				display: flex;
 				justify-content: center;
@@ -401,13 +382,11 @@ nav div.wp-block-navigation__responsive-dialog {
 	}
 
 	&.icon-nav {
-
 		& .menu {
 			display: block;
 		}
 
 		@media screen and (min-width: 600px) {
-
 			& .menu {
 				display: flex;
 				justify-content: center;
@@ -415,7 +394,6 @@ nav div.wp-block-navigation__responsive-dialog {
 		}
 
 		@media screen and (max-width: 600px) {
-
 			& .primary-menu-container {
 				position: absolute;
 				z-index: -5;
@@ -426,9 +404,7 @@ nav div.wp-block-navigation__responsive-dialog {
 				height: 330%;
 				padding: 0px 30px;
 				opacity: 0;
-				transition:
-					opacity 0.3s ease,
-					top 0.3s ease-out,
+				transition: opacity 0.3s ease, top 0.3s ease-out,
 					none 0.1s ease 0.4s;
 				display: none;
 			}
@@ -439,7 +415,6 @@ nav div.wp-block-navigation__responsive-dialog {
 			}
 
 			&.nav--toggled-on {
-
 				& .menu-toggle span.dashicons::before {
 					content: "\f158";
 				}
@@ -462,7 +437,9 @@ nav div.wp-block-navigation__responsive-dialog {
 
 .nav--toggle-sub .dropdown,
 .nav--toggle-sub .dropdown-toggle,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-icon {
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__responsive-container-content
+	.wp-block-navigation__submenu-icon {
 	display: block;
 	background: transparent;
 	position: relative;
@@ -494,27 +471,34 @@ nav div.wp-block-navigation__responsive-dialog {
 	transition: transform 0.2s;
 }
 
-.nav--toggle-sub li.menu-item--toggled-on>button.dropdown-toggle .dropdown-symbol {
+.nav--toggle-sub
+	li.menu-item--toggled-on
+	> button.dropdown-toggle
+	.dropdown-symbol {
 	transform: translateY(-50%) rotate(225deg);
 }
 
-.nav--toggle-sub li.menu-item--toggled-on button.wp-block-navigation__submenu-icon svg {
+.nav--toggle-sub
+	li.menu-item--toggled-on
+	button.wp-block-navigation__submenu-icon
+	svg {
 	transition: transform 0.2s;
 }
 
-.nav--toggle-sub li.menu-item--toggled-on>button.wp-block-navigation-submenu__toggle svg {
+.nav--toggle-sub
+	li.menu-item--toggled-on
+	> button.wp-block-navigation-submenu__toggle
+	svg {
 	transform: rotate(180deg);
 }
 
 @media (--narrow-menu-query) {
-
 	.nav--toggle-small.nav--toggled-on .menu {
 		display: block;
 	}
 }
 
 @media (--wide-menu-query) {
-
 	.nav--toggle-small .menu-toggle {
 		display: none;
 	}
@@ -592,9 +576,9 @@ nav div.wp-block-navigation__responsive-dialog {
 	 * If the dropdown toggle is active with JS, then
 	 * we'll take care of showing the submenu with JS.
 	 */
-	.nav--toggle-sub li:hover>ul,
-	.nav--toggle-sub li.menu-item--toggled-on>ul,
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus>ul {
+	.nav--toggle-sub li:hover > ul,
+	.nav--toggle-sub li.menu-item--toggled-on > ul,
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
 		display: block;
 	}
 
@@ -606,7 +590,7 @@ nav div.wp-block-navigation__responsive-dialog {
 	 * This selector needs to stay separated, otherwise submenus
 	 * will not be displayed with IE/Edge.
 	 */
-	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within>ul {
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within > ul {
 		display: block;
 	}
 }
@@ -644,12 +628,8 @@ nav div.wp-block-navigation__responsive-dialog {
 	text-decoration: underline;
 }
 
-.menu li.current-menu-item a {
-	background-color: #000 !important;
-}
-
-.main-navigation .current-menu-item>a,
-.main-navigation .current-menu-ancestor>a {
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a {
 	font-weight: 600;
 }
 
@@ -664,8 +644,8 @@ nav div.wp-block-navigation__responsive-dialog {
 ## Main navigation menu - overrides for navigation block
 --------------------------------------------------------------*/
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__responsive-container-content {
 	& ul.wp-block-navigation__container {
 		width: 100%;
 	}
@@ -697,12 +677,14 @@ nav div.wp-block-navigation__responsive-dialog {
 	}
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__responsive-container-content
+	.has-child
+	.wp-block-navigation__submenu-container {
 	padding: 0.3em 0.5em;
 }
 
 @media (--wide-menu-query) {
-
 	.main-navigation ul li a {
 		padding: 0.4em 0.5em;
 	}
@@ -747,13 +729,10 @@ nav div.wp-block-navigation__responsive-dialog {
 	.main-navigation.wp-block-navigation ul {
 		display: flex;
 	}
-
 }
 
 @media (--narrow-menu-query) {
-
 	.main-navigation {
-
 		& a {
 			flex: 90%;
 		}
@@ -776,7 +755,6 @@ nav div.wp-block-navigation__responsive-dialog {
 	}
 }
 
-
 /*--------------------------------------------------------------
 # Content navigation
 --------------------------------------------------------------*/
@@ -794,7 +772,6 @@ nav div.wp-block-navigation__responsive-dialog {
 }
 
 @media (--content-query) {
-
 	.site-main .comment-navigation,
 	.site-main .posts-navigation,
 	.site-main .post-navigation,
@@ -894,16 +871,55 @@ nav div.wp-block-navigation__responsive-dialog {
 }
 
 .footer-flex:first-child {
-	margin: 1.5rem 0;
+	margin: 2.5rem 0 0 0;
 	background: #151515;
 }
-
+.footer-info p {
+	margin: 0 0 1.5rem 0;
+}
 .footer-flex:nth-child(2) {
 	/* margin-top: 0.5rem; */
 }
 
+.site-footer .custom-logo {
+	width: 250px;
+}
+
+.footer-social {
+	display: flex;
+	gap: 5px;
+}
+.address {
+	text-align: center;
+}
+.phone-number {
+	font-weight: bold;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1.5rem;
+}
+.sitefooter a {
+	display: block;
+	text-decoration: none !important;
+	color: #a93338;
+}
+
 .site-info {
 	text-align: left;
+}
+
+@media screen and (max-width: 400px) {
+	.site-footer .custom-logo {
+		margin: 26px auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.site-footer{
+	padding: 0 1.875rem;
+	}
+	.footer-social{
+		justify-content: center;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -914,7 +930,6 @@ nav div.wp-block-navigation__responsive-dialog {
 .infinite-scroll .posts-navigation,
 .infinite-scroll .pagination,
 .infinite-scroll.neverending .site-footer {
-
 	/* Theme Footer (when set to scrolling) */
 	display: none;
 }
@@ -954,8 +969,6 @@ were hidden (via .neverending) before. */
 }
 
 @media only screen and (max-width: 767px) {
-
-
 	.site-branding {
 		order: 1;
 		flex-grow: 1;
@@ -967,6 +980,5 @@ were hidden (via .neverending) before. */
 
 	.custom-logo {
 		display: block;
-
 	}
 }
