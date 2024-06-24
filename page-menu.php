@@ -463,7 +463,7 @@ get_header();
         </section>
 
         <!-- INDO CHINESE -->
-        <section class="" id="indo-chinese">
+        <section class="pb-20" id="indo-chinese">
             <h2>
                 Indo Chinese
             </h2>
